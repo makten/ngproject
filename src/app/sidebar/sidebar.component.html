@@ -1,0 +1,36 @@
+<div class="side-nav" ref="sidebar">
+
+    <div class="logo">
+        <i class="fa fa-tachometer"></i>
+        <span> {{ logo }} </span>
+    </div>
+
+    <nav class="side-list">
+
+        <div style="height: 80px; background: #1F60C1; padding-top: 10px; text-align: center;">
+
+
+            <img style="border: 2px solid lightgrey; padding: 2px; margin-right: 7px; height: 55px; width: 55px; border-radius: 50%; background: #E9E8E8;" src="/static/img/prof.jpg" class="user-image" alt="User Image" />
+
+
+        </div>
+
+        <ul>
+
+            <!--<li :class="{ active: item.active }">-->
+            <li *ngFor="let item of linkList">
+
+                <a href="{{item.link}}" (click)="changeActive(item.title)">
+
+                    <span class="{{item.icon}}"></span>
+
+                    <span> {{ item.title }} </span>
+
+                </a>
+
+            </li>
+
+        </ul>
+    </nav>
+
+</div>

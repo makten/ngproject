@@ -1,0 +1,85 @@
+<div class="main">
+
+    <div class="col-md-8 col-md-offset-2" id="bam" style="margin-top: 80px;">
+
+        <h1>
+
+            Something Amazing Is Coming Soon!
+
+        </h1>
+
+        <p class="fadeIn wait-2s">You Will Love it</p>
+
+    </div>
+
+
+    <div class="widget">
+        <div class="title">Number of views</div>
+        <div class="chart">
+
+
+            <h3> {{firstMethod ()}} </h3>
+            <img [src]="imagePath">
+            <!-- Property binding-->
+            <img src="{{imagePath}}">
+            <!-- Interpolation-->
+            <img bind-src="imagePath">
+            <!-- Interpolation-->
+
+            <button [disabled]='isDisabled' (click)='enabledBtn()'>Click</button>
+            <button class="colorClass" [class]='addClass'>Testing button</button>
+
+            <table>
+
+                <thead>
+                    <th attr.colspan="{{colSpan}}">Person Details</th>
+                    <th [attr.colspan]="colSpan">Person Details</th>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Firstname</td>
+                        <td>{{firstname}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lastname</td>
+                        <td>{{lastname}}</td>
+                    </tr>
+
+                    <tr *ngIf='showDetails'>
+                        <td>Gender</td>
+                        <td>{{gender}}</td>
+                    </tr>
+
+                    <tr *ngIf='showDetails'>
+                        <td>Age</td>
+                        <td>{{age}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <button (click)='toggleDetails()'>{{showDetails ? "Hide" : "Show"}} Details</button>
+            <button on-click='toggleDetails()'>{{showDetails ? "Hide" : "Show"}} Details</button>
+        </div>
+    </div>
+
+
+    <div class="widget">
+        <div class="title">Number of likes</div>
+        <div class="chart">
+            <courses></courses>
+
+        </div>
+    </div>
+
+    <div class="widget">
+        <div class="title">Number of comments</div>
+        <div class="chart">
+            <authors></authors>
+            <casing [testProp]></casing>
+        </div>
+    </div>
+
+</div>
