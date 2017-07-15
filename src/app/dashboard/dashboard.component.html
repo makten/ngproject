@@ -69,7 +69,22 @@
     <div class="widget">
         <div class="title">Number of likes</div>
         <div class="chart">
+
             <courses></courses>
+
+            <!--Using a slots for passing data  -->
+            <general-panel>
+                <ng-container class="heading">
+                    Some heading
+                </ng-container>
+
+                <div class="body">
+                    <h3>Some Content</h3>
+                    <p>This is some paragraph</p>
+                </div>
+
+            </general-panel>
+
 
         </div>
     </div>
@@ -78,8 +93,39 @@
         <div class="title">Number of comments</div>
         <div class="chart">
             <authors></authors>
-            <casing [testProp]></casing>
+            <casing></casing>
+
+            <div *ngIf="posts.length > 0; then coursesList else noPosts"></div>
+
+            <ng-template #coursesList>
+                <ul class="list-group" *ngFor="let post of posts">
+                    <li class="list-group-item">
+                        {{post.title}} ||
+                        <favourite [is-favorite]="post.isFavorite" (is-changed)="onFavoriteChange($event)"></favourite>
+                        <item-like [is-liked]="post.isLiked" [like-count]="post.likeCount">
+                        </item-like>
+                    </li>
+
+                </ul>
+            </ng-template>
+
+            <ng-template #noPosts>
+                No posts available
+            </ng-template>
+
+
         </div>
     </div>
+
+    <div class="widget">
+        <div class="title">Tabs Test</div>
+        <div class="chart">
+            <app-tab></app-tab>
+        </div>
+    </div>
+
+    <!--Testing custom directives  -->
+    <!-- <input type="text" appInputFormatter [format]="'uppercase'"> -->
+    <input type="text" [appInputFormatter]="'uppercase'">
 
 </div>

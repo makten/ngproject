@@ -1,0 +1,13 @@
+<!-- <span style="font-size: 15px;" (click)="toggleLike()" class="glyphicon" 
+  [class.glyphicon-heart]='isLiked' 
+  [class.glyphicon-heart-empty]='!isLiked'
+  aria-hidden="true">
+</span> -->
+
+<span style="font-size: 15px;" (click)="toggleLike()" class="glyphicon" 
+  [ngClass]="{'glyphicon-heart': isLiked,
+  'glyphicon-heart-empty': !isLiked}"
+aria-hidden="true">
+</span>
+
+<span>{{ likeCount }}</span>

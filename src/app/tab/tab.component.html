@@ -1,0 +1,25 @@
+<ul class="nav nav-pills">
+  <li [class.active]="viewMode == 'tab1'"><a (click)="viewMode = 'tab1'">Tab 1</a></li>
+  <li [class.active]="viewMode == 'tab2'"><a (click)="viewMode = 'tab2'">Tab 2</a></li>
+  <li [class.active]="viewMode == 'tab3'"><a (click)="viewMode = 'tab3'">Tab 3</a></li>
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="bootstrap-elements.html" data-target="#">
+      Dropdown <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="javascript:void(0)">Action</a></li>
+      <li><a href="javascript:void(0)">Another action</a></li>
+      <li><a href="javascript:void(0)">Something else here</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:void(0)">Separated link</a></li>
+    </ul>
+  </li>
+</ul>
+
+<div [ngSwitch]="viewMode">
+
+  <div *ngSwitchCase="'tab1'">Tab 1 Conttent</div>
+  <div *ngSwitchCase="'tab2'">Tab 2 Content</div>
+  <div *ngSwitchCase="'tab3'">Tab 3 Content</div>
+  <div *ngSwitchDefault>Something Else</div>
+</div>

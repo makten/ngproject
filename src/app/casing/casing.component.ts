@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class CasingComponent implements OnInit {
-  @Input() testProp: boolean;
+  // @Input() testProp: boolean;
   movie: string = "hello";
   
   constructor() { }

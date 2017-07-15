@@ -19,10 +19,7 @@ import { Component } from '@angular/core';
                 </ul>  
                 
                 <button class="btn btn-success btn-sm">Click</button><br/><br/>
-                <span (click)="isActive = !isActive" class="glyphicon" 
-                [class.glyphicon-star]='isActive' 
-                [class.glyphicon-star-empty]='!isActive'
-                aria-hidden="true"></span>
+                
                 
             `
 })
@@ -31,7 +28,7 @@ export class CoursesComponent {
     title: string = 'List of Courses';
     courses: any[] = [];
     longText: string = "Lerem Ipsum sis simply some dummy text to play with when you having a good time!";
-    isActive: boolean = false;
+    
 
     constructor(service: CoursesService) {
         // let service = new CoursesService();

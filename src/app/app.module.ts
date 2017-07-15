@@ -17,6 +17,11 @@ import { TitleCasePipe } from './title-case.pipe';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { FavouriteComponent } from './favourite/favourite.component';
+import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
+import { TabComponent } from './tab/tab.component';
+import { InputFormatterDirective } from './input-formatter.directive';
 
 
 
@@ -33,7 +38,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     TitleCasePipe,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    FavouriteComponent,
+    PanelComponent,
+    LikeComponent,
+    TabComponent,
+    InputFormatterDirective
   ],
   imports: [
     BrowserModule, 
